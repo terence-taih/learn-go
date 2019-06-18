@@ -61,3 +61,17 @@ Udemy course:
 
    Question: 
       1. How to debug test in VS code 
+
+
+
+
+
+Resources: 
+      - https://www.youtube.com/channel/UCElzlyMtkoXaO3kFa5HL0Xw 
+      - Course Resouces: https://docs.google.com/document/d/18-0u5CvNIr83oOfMXPoM4klVFASXGl3Vvua1wBGMIoQ/edit
+      - Slide: https://drive.google.com/drive/u/0/folders/0B22KXlqHz6ZNfjNXTzk1U3JHUkJ6VjJ3dnJKNzVtNjRUM3Q2WFNqWGI2Q3RadERqUlVrOEU
+      - Github source codes
+      - Book: Go in action, The Go programing language
+      - Go by Example 
+      - Golang language spec 
+      - Effective go 
