@@ -11,29 +11,46 @@ type contactInfo struct {
 type person struct {
 	firstName string
 	lastName  string
-	contact   contactInfo
+	contactInfo
+	//contact   contactInfo
 	// contactInfo : antoher way, just use the struct type
 }
 
 func main() {
-	testStruct()
+	struct1()
+	struct2()
 }
 
-func testStruct() {
+func struct2() {
+	// this one is called anonymous struct
+	p := struct {
+		firstName string
+		lastName  string
+	}{
+		firstName: "Thai",
+		lastName:  "Nguyen",
+	}
+	fmt.Println(p)
+}
+
+func struct1() {
 	alex := person{firstName: "Alex",
-		lastName: "Anderson",
-		contact:  contactInfo{email: "test@gmail.com", zipCode: 1000}}
+		lastName:    "Anderson",
+		contactInfo: contactInfo{email: "test@gmail.com", zipCode: 1000}}
 	fmt.Println(alex)
 	var thai person
-	thai.contact = contactInfo{email: "thainguyen@hoiio.com", zipCode: 100}
+	thai.contactInfo = contactInfo{email: "thainguyen@hoiio.com", zipCode: 100}
 	(&thai).updateName("Terence")
 	thai.print()
+
+	// Notice this one: just use thai.email instead of thai.contactInfo.email
+	fmt.Println("Special thing:", thai.email)
 }
 
 func (p person) print() {
 	fmt.Printf("%+v", p)
 }
 
-func (pointerToPerson *person) updateName(newFirstName string) {
-	(*pointerToPerson).firstName = newFirstName
+func (p *person) updateName(newFirstName string) {
+	(*p).firstName = newFirstName
 }

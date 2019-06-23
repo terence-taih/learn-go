@@ -26,7 +26,5 @@ func main() {
 			fmt.Print(string(content))
 		}
 	}
-
 	io.Copy(os.Stdout, file)
-
 }
